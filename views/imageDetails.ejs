@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body class="bg-gradient-to-r from-zinc-800 to-zinc-900 text-white">
+    <div class="w-full px-10 py-3 flex justify-between">
+        <h3>Pinterest</h3>
+        <div class="flex gap-10 items-center">
+            <a href="/profile">Profile</a><a href="/feed">Feed</a><a class="px-3 py-2 bg-red-700 text-white rounded-lg" href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="w-full min-h-screen bg-white-800 px-10 py-8">
+        <div class="image-details transition-transform transform hover:scale-105">
+            <div class="w-60 h-full bg-sky-200 rounded-lg overflow-hidden">
+                <img src="/images/uploads/<%= post.image %>" alt="" class="w-full h-full object-cover">
+            </div>
+            <h2 class="mt-4 text-2xl font-semibold text-white"><%= post.title %></h2>
+            <!-- Add more details as needed -->
+        </div>
+    </div>
+
+    <style>
+        /* Add your custom styles here */
+        body {
+            margin: 0;
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(to right, #4a5568, #2d3748);
+        }
+
+        .image-details {
+            transition: transform 0.3s;
+        }
+
+        .image-details:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</body>
+</html>

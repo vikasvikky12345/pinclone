@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/login.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <div class="login">
+        <div class="login-center">
+          <div class="login-content">
+            <h3 class="login-title">PINTEREST LOGIN</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" class="pinlogo">
+          </div>
+          <% if (error.length > 0) { %>
+            <p class="error"><%= error[0] %></p>
+          <% } %>
+          <form action="/login" method="post">
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="basic-addon1">USERNAME</span>
+              <input type="text" class="form-control" placeholder="Username" name='username' aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="basic-addon1">PASSWORD</span>
+              <input type="password" class="form-control" name="password" placeholder="Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="btn-group" role="group">
+              <button type="submit" class="btn btn-danger red">Submit</button>
+            </div>
+          </form>              
+          <a href="/signup"> dint have an account on pinterest ?. click here</a>
+          <p class="terms">Creating an account means you’re okay with</br> Pinterest's Terms of Service, <a href="#">Privacy Policy</a></p>
+        </div>
+      </div>
+</body>
+</html>

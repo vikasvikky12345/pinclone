@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="w-full bg-blue-500 px-10 py-3 flex justify-between items-center">
+        <h3 class="text-white">Pinterest</h3>
+        <div class="flex gap-10 items-center">
+            <a href="/profile" class="text-white">Profile</a>
+            <a href="/feed" class="text-white">Feed</a>
+            <a class="px-3 py-2 bg-red-700 text-white rounded-lg" href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="w-full max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="filecaption" class="block text-gray-700 text-sm font-bold mb-2">Caption:</label>
+                <input type="text" id="filecaption" name="filecaption" placeholder="Some Caption"
+                    class="w-full px-3 py-2 border rounded-md">
+            </div>
+            <div class="mb-4">
+                <label for="file" class="block text-gray-700 text-sm font-bold mb-2">Choose File:</label>
+                <input type="file" id="file" name="file" class="w-full px-3 py-2 border rounded-md">
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring focus:ring-blue-200">
+                Upload
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
