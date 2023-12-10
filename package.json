@@ -2,6 +2,9 @@
   "name": "mypinclone",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "nodes": "14.x"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "build:css": "postcss public/stylesheets/styles.css -o public/stylesheets/style.css",
